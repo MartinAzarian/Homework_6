@@ -1,1 +1,54 @@
+package com.company;
 
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Circle abc = new Circle();
+
+		System.out.println("import radius");
+		Scanner scan = new Scanner(System.in);
+		double radius = scan.nextDouble();
+
+		abc.setRaidus(radius);
+		abc.calculateArea();
+		abc.calculatePerimetr();
+		abc.printRadiusAreaPerimetr();
+	}
+}
+
+public class Circle {
+    private double raidus;
+
+    public Circle(double raidus) {
+        this.raidus = raidus;
+    }
+
+    public void setRaidus(double raidus) {
+        this.raidus = raidus;
+    }
+
+    public Circle() {
+        this.raidus = 0;
+    }
+
+    public double calculatePerimetr() {
+        double perimetr = 0;
+        perimetr = 2 * Math.PI * this.raidus;
+        return perimetr;
+    }
+
+    public double calculateArea() {
+        double area = 0;
+        area = Math.PI * this.raidus * this.raidus;
+        return area;
+    }
+
+    public void printRadiusAreaPerimetr() {
+
+        System.out.println("Radius = " + this.raidus);
+        System.out.println("Area = " + calculateArea());
+        System.out.println("Perimetr = " + calculatePerimetr());
+    }
+}
