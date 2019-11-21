@@ -1,0 +1,43 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        TemperatureConvert temp = new TemperatureConvert();
+    }
+}
+package com.company;
+
+public class TemperatureConvert {
+
+    public double converteFarenheitToCelsius(double farenheit) {
+        double celsius = (farenheit - 32) / 1.8000;
+        return celsius;
+    }
+
+    public double converteFarenhiteToKelvin(double farenheit) {
+        double kelvin = (farenheit - 32) / 1.8000 + 273.15;
+        return kelvin;
+    }
+
+    public double converteCelsiusToFarenheite(double celsius) {
+        double farenheite = celsius * 1.8000 + 32.00;
+        return farenheite;
+    }
+
+    public double converteCelsiusToKelvin(double celsius) {
+        double kelvin = celsius + 273;
+        return kelvin;
+    }
+
+    public double converteKelvinToFarenheit(double kelvin) {
+        double farenheit = (kelvin - 273.15) * 1.8000 + 32.00;
+        return farenheit;
+    }
+
+    public double converteKelvinToCelsius(double kelvin) {
+        double celsius = kelvin + 273.15;
+        return celsius;
+    }
+
+}
