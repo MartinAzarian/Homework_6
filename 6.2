@@ -1,0 +1,38 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Rectangle abcd = new Rectangle();
+        abcd.setHeight(3);
+        abcd.setWidth(4);
+        abcd.calculateArea();
+        abcd.calculatePerimetr();
+    }
+}
+package com.company;
+
+public class Rectangle {
+    private double height;
+    private double width;
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double calculatePerimetr() {
+        double perimetr = 0;
+        perimetr = 2 * (this.width + this.height);
+        return perimetr;
+    }
+
+    public double calculateArea() {
+        double area = 0;
+        area = this.height * this.width;
+        return area;
+    }
+}
