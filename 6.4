@@ -1,0 +1,35 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Point p1 = new Point();
+        p1.setCoordinate(4, 5);
+        p1.distance();
+        p1.distance(5, 6);
+    }
+}
+package com.company;
+
+public class Point {
+    private int coordinateX;
+    private int coordinateY;
+
+    public void setCoordinate(int coordinateX, int coordinateY) {
+        this.coordinateY = coordinateY;
+        this.coordinateX = coordinateX;
+    }
+
+    public double distance() {
+        double distance = Math.sqrt(Math.pow(this.coordinateX, this.coordinateX) + Math.pow(this.coordinateY, this.coordinateY));
+        return distance;
+    }
+
+    public double distance(double coordinateX, double coordinateY) {
+        double coordinate2x = coordinateX;
+        double coordinate2y = coordinateY;
+
+        double distance = Math.abs(Math.sqrt(Math.pow(coordinate2x - this.coordinateX, coordinate2x - this.coordinateX) + Math.pow(coordinate2y - this.coordinateY, coordinate2y - this.coordinateY)));
+        return distance;
+    }
+}
